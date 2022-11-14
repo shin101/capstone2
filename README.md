@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+## Favorite Recipe App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is perfect for anyone looking for ideas or inspirations for recipes. Users will be able to sign up, login, browse through different recipes and save them . 
 
-## Available Scripts
 
-In the project directory, you can run:
+### Target Audience
+This app is for anyone but the main foucs will be for those in the 20-40s age group. However, this app will have simple UI that have just enough features for senior citizens to easily navigate as well. 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### What data do you plan on using? 
+API: https://spoonacular.com/food-api
+APP DB: PostgreSQL
+This is a full stack application that will use ReactJS, nodeJS, PostgreSQL and more. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### What does your database schema look like? 
+![schema](https://github.com/shin101/capstone2/blob/main/capstone2_schema.png?raw=true)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Is there any sensitive information you need to secure? 
+Login, password, authentication. Users must be logged in to browse recipes. Passwords will be stored with Bcrypt
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### What functionality will your app include? 
+Signup, login, log out, browse recipes, favorite recipes 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### What will the user flow look like? 
+Landing page that shows a sign up page as well as a log in link in the nav bar for existing users. 
+Once a user is logged in they will see a list of available recipes, search through them and save any recipes they like. There will also be a feature to edit user's profile information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Stretch goals?
+Ability for users to add and post their own recipes. Feature to see the original poster of the recipe and be able to send them a message. 
