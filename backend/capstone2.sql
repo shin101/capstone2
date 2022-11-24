@@ -28,6 +28,9 @@ VALUES ('bauer-gallagher', 'Bauer-Gallagher', 862,
        ('baker-santos', 'Baker-Santos', 225,
         'Compare certain use. Writer time lay word garden. Resource task interesting voice.',
         '/logos/logo3.png'),
-       ('erickson-inc', 'Erickson Inc', 267,
+       ('erickson-inc', 'Erickson Inc', 267),
+
+INSERT INTO cuisines (name)
+VALUES ()
     
 
