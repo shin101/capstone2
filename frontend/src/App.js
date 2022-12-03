@@ -41,12 +41,21 @@ function App() {
     }
   }
 
+  async function register(registerData){
+    try {
+      const token = await RecipeApi.register(registerData);
+      setToken(token);
+    } catch (e){
+      return (e);
+    }
+  }
+
 
   return (
     <div>
       <BrowserRouter>
         <NavBar />
-        <NavRoutes login={login} />
+        <NavRoutes register={register} login={login} />
       </BrowserRouter>
     </div>
   );
