@@ -33,6 +33,11 @@ class RecipeApi {
     return res.token;
   }
 
+  static async getUser(username) {
+    let res = await this.request(`users/${username}`)
+    return res.user;
+  }
+
 
 }
 
