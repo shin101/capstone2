@@ -6,6 +6,7 @@ import NavRoutes from './routes/NavRoutes';
 import React, {useEffect, useState} from "react";
 import RecipeApi from './api/api';
 import jwt from "jsonwebtoken";
+import UserContext from './Login/UserContext';
 import useLocalStorage from './hooks/localStorage';
 
 function App() {
@@ -50,12 +51,19 @@ function App() {
     }
   }
 
+  async function logOut(){
+    setCurrUser(null);
+    setToken(null);
+  }
+
 
   return (
     <div>
       <BrowserRouter>
-        <NavBar />
-        <NavRoutes register={register} login={login} />
+        <UserContext.Provider value={{ currUser }}>
+          <NavBar logOut={logOut} />
+          <NavRoutes register={register} login={login} />
+          </UserContext.Provider>
       </BrowserRouter>
     </div>
   );
