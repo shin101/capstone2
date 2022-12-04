@@ -63,7 +63,7 @@ function NavBar({ logOut }) {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="/">Sign Up</Nav.Link>
+              <Nav.Link href="/register">Sign Up</Nav.Link>
   
             </Nav>
             <Form className="d-flex">

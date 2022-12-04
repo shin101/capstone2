@@ -1,11 +1,4 @@
 "use strict";
-
-/** Routes for authentication. */
-
-const jsonschema = require("jsonschema");
-
-"use strict";
-
 /** Routes for authentication. */
 
 const jsonschema = require("jsonschema");

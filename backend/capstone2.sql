@@ -1,18 +1,17 @@
--- both test users have the password "password"
-
-INSERT INTO recipes (food_title, image, author, servings, instructions)
-VALUES ('prawn & coconut soup',
-        'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/cheats-laksa-a7487d8.jpg?quality=90&webp=true&resize=300,272',
-        'Sophie Godwin',
-        2,
-        'Heat 1 tsp flavourless oil in a frying pan over a medium heat. Add the curry paste and cook for 1 min. Pour in the coconut milk, then leave to bubble away for a few mins before adding the prawns and courgetti. Cook for 1 min more to warm through, then divide between bowls.'),
+\echo 'Delete and recreate db?' \prompt 'Return for yes or control-C to cancel > ' foo
+DROP DATABASE capstone2;
 
 
-INSERT INTO users (username, password, first_name, last_name, email, is_admin)
-VALUES ('doritos', 1234, 'doritos',
-        'doritos','doritos@gmail.com' , NULL)
+CREATE DATABASE capstone2;
 
-INSERT INTO cuisines (name)
-VALUES ('Chinese','Japanse','Korean','Indian')
-    
+\connect capstone2;
 
+\i capstone2-schema.SQL \i capstone2-seed.SQL \echo 'Delete and recreate capstone2_test db?' \prompt 'Return for yes or control-C to cancel > ' foo
+DROP DATABASE capstone2_test;
+
+
+CREATE DATABASE capstone2_test;
+
+\connect capstone2_test;
+
+\i capstone2-schema.SQL

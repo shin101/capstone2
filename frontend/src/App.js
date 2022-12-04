@@ -11,7 +11,6 @@ import useLocalStorage from './hooks/localStorage';
 
 function App() {
   const [token, setToken] = useState(null);
-  const [mealData, setMealData] = useState(null);
   const [currUser, setCurrUser] = useLocalStorage(null);
 
   // triggered by state change of token 
@@ -60,10 +59,10 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <UserContext.Provider value={{ currUser }}>
+        <UserContext.Provider value={{ currUser, register, login }}>
           <NavBar logOut={logOut} />
-          <NavRoutes register={register} login={login} />
-          </UserContext.Provider>
+          <NavRoutes />
+        </UserContext.Provider>
       </BrowserRouter>
     </div>
   );

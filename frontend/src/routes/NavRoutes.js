@@ -4,6 +4,7 @@ import Homepage from "../homepage/Homepage";
 import LoginForm from "../Login/LoginForm";
 import RegisterForm from "../Login/RegisterForm";
 import RecipeList from "../recipes/RecipeList"
+import UserContext from "../Login/UserContext";
 
 function NavRoutes({ login, register }){
 
@@ -12,9 +13,9 @@ function NavRoutes({ login, register }){
       <Routes>
         <Route exact path="/recipes" element={<RecipeList />} />
 
-        <Route exact path="/register" element={<RegisterForm register={register} />}/>
+        <Route exact path="/register" element={<RegisterForm />}/>
 
-        <Route exact path="/login" element={<LoginForm login={login} />} />
+        <Route exact path="/login" element={<LoginForm />} />
         <Route exact path="*" element={<Homepage />} />
 
       </Routes>

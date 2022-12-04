@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom'
+import UserContext from './UserContext';
 
 
-function LoginForm({ login }){
-  const [formData, setFormData] = useState({}); 
+function LoginForm(){
+  const { login } = useContext(UserContext);
+  const [formData, setFormData] = useState({
+    username: "",
+    password: ""
+  }); 
   const navigate = useNavigate();
   const handleChange = (e) => {
     const {name, value} = e.target;

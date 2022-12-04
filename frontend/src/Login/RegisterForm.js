@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import UserContext from './UserContext';
 
 
-function RegisterForm({ register }){
+function RegisterForm(){
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+  });
+  const { register } = useContext(UserContext);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(formData => ({
