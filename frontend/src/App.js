@@ -50,7 +50,7 @@ function App() {
     }
   }
 
-  async function logOut(){
+  function logOut(){
     setCurrUser(null);
     setToken(null);
   }

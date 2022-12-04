@@ -1,9 +1,15 @@
 
 -- SET DEFAULT "hello"
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE TABLE cuisines (
+  id uuid DEFAULT uuid_generate_v4() PRIMARY KEY, 
+  name TEXT NOT NULL
+);
 
 CREATE TABLE recipes (
-  id uuid DEFAULT uuid_generate_v4 () PRIMARY KEY,
-  cuisine_id INTEGER REFERENCES cuisines ON DELETE CASCADE,
+  id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
+  cuisine_id uuid REFERENCES cuisines ON DELETE CASCADE,
   food_title TEXT NOT NULL,
   image TEXT,
   author TEXT NOT NULL,
@@ -21,14 +27,10 @@ CREATE TABLE users (
   is_admin BOOLEAN NOT NULL DEFAULT FALSE
 );
 
-CREATE TABLE cuisines (
-  id uuid DEFAULT uuid_generate_v4 () PRIMARY KEY, 
-  name TEXT NOT NULL
-);
 
 CREATE TABLE users_recipes (
   username VARCHAR(15) REFERENCES users ON DELETE CASCADE,
-  recipe_id REFERENCES recipes ON DELETE CASCADE, 
+  recipe_id uuid REFERENCES recipes ON DELETE CASCADE, 
   liked_at TIMESTAMPTZ
 );
 
