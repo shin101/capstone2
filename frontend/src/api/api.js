@@ -38,6 +38,11 @@ class RecipeApi {
     return res.user;
   }
 
+  static async getAllRecipes(searchTerm) {
+    let res = await this.request(`recipes/`, searchTerm);
+    return res.recipes;
+  }
+
 
 }
 

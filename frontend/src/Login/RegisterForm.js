@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserContext from './UserContext';
+import Button from 'react-bootstrap/Button';
 
 
 function RegisterForm(){
@@ -27,9 +28,11 @@ function RegisterForm(){
     navigate('/login');
   }
 
+  
+
   return(
     <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} >
           <div>
             <input 
             name="username" 
@@ -71,8 +74,10 @@ function RegisterForm(){
             />
           </div>
 
-        <button>Sign Up</button>
+          <Button variant="primary" type="submit">Sign Me Up!</Button>
       </form>
+      <p>Already a member? <a href="/login">Login</a></p>
+
     </div>
   )
 

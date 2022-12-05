@@ -12,6 +12,7 @@ import useLocalStorage from './hooks/localStorage';
 function App() {
   const [token, setToken] = useState(null);
   const [currUser, setCurrUser] = useLocalStorage(null);
+  const [recipes, setRecipes] = useState([]);
 
   // triggered by state change of token 
   // call backend to get information on the newly-logged-in user and store it in the currentUser state
@@ -21,16 +22,17 @@ function App() {
       const payload = jwt.decode(token);
       RecipeApi.token = token;
       const currUser = await RecipeApi.getUser(payload.username);
-
       setCurrUser(currUser);
     }
-
     if (token){
       loadCurrentUser();
     }
-
   }, [setCurrUser, token]);
 
+  // search bar in the nav bar
+  async function search(searchTerm){
+    setRecipes(await RecipeApi.getAllRecipes(searchTerm));
+  }
 
   async function login(loginData){
     try {
@@ -59,7 +61,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <UserContext.Provider value={{ currUser, register, login }}>
+        <UserContext.Provider value={{ currUser, register, login, search, recipes, setRecipes }}>
           <NavBar logOut={logOut} />
           <NavRoutes />
         </UserContext.Provider>

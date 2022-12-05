@@ -8,8 +8,8 @@ function Homepage() {
 
   function loggedInHomepage(){
     return (
-      <div>
-        you are logged in
+      <div class='LoggedIn'>
+        <h2>Welcome back, *USERNAME*</h2>
       </div>
     )
   }
@@ -17,12 +17,11 @@ function Homepage() {
   function loggedOutHomepage(){
     return (
       <div className="Homepage">
-        Sign up now
-        <RegisterForm /> 
-
-
         <h2 className="text-center">Get your next dinner idea.</h2>
-       
+        <h3>Sign up today</h3>
+        <RegisterForm />
+
+      
       </div>
     )
   }

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 // import SearchForm from "../common/SearchForm";
 // import RecipeApi from "../api/api";
-// import RecipeCard from "./RecipeCard";
+import RecipeCard from "./RecipeCard";
 
 
 function RecipeList() {
-  console.debug("RecipeList");
+console.debug("RecipeList");
 
   // const [companies, setCompanies] = useState(null);
 
@@ -24,7 +24,10 @@ function RecipeList() {
 
   return (
     <div>
-      hihihi recipe list here
+      {/* {recipes.map(r=>(
+        <RecipeCard key={...r} />
+      ))} */}
+      
       {/* <div className="CompanyList col-md-8 offset-md-2">
         <SearchForm searchFor={search} />
         {companies.length
