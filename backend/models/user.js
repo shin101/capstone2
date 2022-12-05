@@ -87,6 +87,39 @@ class User {
     return user;
   }
 
+  // Find all users
+  static async findAll() {
+    const result = await db.query(
+      `SELECT username,
+              first_name AS "firstName",
+              last_name AS "lastName",
+              email,
+              is_admin AS "isAdmin"
+      FROM users
+      ORDER BY username`,
+    );
+    return result.rows;
+  }
+
+  // Find one specific
+  static async get(username) {
+    const result = await db.query(
+      `SELECT username,
+              first_name AS "firstName",
+              last_name AS "lastName",
+              email,
+              is_admin AS "isAdmin"
+      FROM users
+      WHERE username = $1`,
+      [username],
+    );
+    
+    const user = result.rows[0];
+
+    if(!user) throw new NotFoundError(`No such user: ${username}`);
+    return user;
+  }
+
 }
 
 module.exports = User;

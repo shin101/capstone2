@@ -4,7 +4,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 CREATE TABLE cuisines (
   id uuid DEFAULT uuid_generate_v4() PRIMARY KEY, 
-  name TEXT NOT NULL
+  name 
 );
 
 CREATE TABLE recipes (
@@ -12,7 +12,6 @@ CREATE TABLE recipes (
   cuisine_id uuid REFERENCES cuisines ON DELETE CASCADE,
   food_title TEXT NOT NULL,
   image TEXT,
-  author TEXT NOT NULL,
   servings TEXT, 
   instructions TEXT NOT NULL
 );
