@@ -82,7 +82,7 @@ class Recipe {
 
     // Finalize query and return results
 
-    query += " ORDER BY name";
+    query += " ORDER BY food_title";
     const recipesRes = await db.query(query, queryValues);
     return recipesRes.rows;
   }

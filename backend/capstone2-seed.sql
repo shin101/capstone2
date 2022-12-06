@@ -2,7 +2,7 @@ INSERT INTO recipes (food_title, image, servings, instructions)
 VALUES ('Sweet Potato Casserole Gourmet & Holiday Baking',
         'https://spoonacular.com/recipeImages/715380-556x370.jpg',
         3,
-        'Take your sweet potato mixture and place in a prepared 9 x 13 glass baking dish. Cover the top with finely chopped sugar pecans. Bake for 30 minutes or until the topping is lightly browned.Serve warm as a side dish, or add some vanilla ice cream to the side and serve as a dessert. It really is THAT good.Print3.2.1263Want a chance to win $250 giftcard from WalMart? Follow Land O Lakes on Pinterestand enter your email below. You can enter between 11/25/13 and 1/14/14. Visit this Holiday Treats Board and PIN your favorites. Dont forget to PIN one of the images in this POST, too. Enter below:This is one of those recipes that elevates your cooking status to your friends and family. They wont believe you made it if they dont see you do it. It is amazing. If you try any recipe this holiday baking season, make sure you try this Gourmet Sweet Potato Casserole Recipe.JOIN 500,000 SUBSCRIBERS!Join over 500,000 others who follow PinkWhen on Social Media, the PinkWhen blog, and email. Sign up to receive exclusive bonuses like this FREE Simple Fit Dinners Ebook.Don\'t wait! You won\'t want to miss a thing.Success! Now check your email to confirm your subscription and download your FREE ebook.There was an error submitting your subscription. Please try again.First NameEmail AddressSubscribePowered by ConvertKit'),
+        'Take your sweet potato mixture and place in a prepared 9 x 13 glass baking dish. Cover the top with finely chopped sugar pecans. Bake for 30 minutes or until the topping is lightly browned.Serve warm as a side dish, or add some vanilla ice cream to the side and serve as a dessert. It really is THAT good.Print3.2.1263Want a chance to win $250 giftcard from WalMart? Follow Land O Lakes on Pinterestand enter your email below. You can enter between 11/25/13 and 1/14/14. Visit this Holiday Treats Board and PIN your favorites. Dont forget to PIN one of the images in this POST, too. Enter below:This is one of those recipes that elevates your cooking status to your friends and family. They wont believe you made it if they dont see you do it. It is amazing. If you try any recipe this holiday baking season, make sure you try this Gourmet Sweet Potato Casserole Recipe.JOIN 500,000 SUBSCRIBERS!Join over 500,000 others who follow PinkWhen on Social Media, the PinkWhen blog, and email. Sign up to receive exclusive bonuses like this FREE Simple Fit Dinners Ebook.Don''t wait! You won''t want to miss a thing.Success! Now check your email to confirm your subscription and download your FREE ebook.There was an error submitting your subscription. Please try again.First NameEmail AddressSubscribePowered by ConvertKit'),
         ('Tuscan White Bean Soup with Olive Oil and Rosemary',
         'https://spoonacular.com/recipeImages/664147-556x370.jpg',
         6,
@@ -12,7 +12,10 @@ VALUES ('Sweet Potato Casserole Gourmet & Holiday Baking',
         'https://spoonacular.com/recipeImages/647046-556x370.jpg',
         10,
         'Preheat the oven to 350 degrees F. Line cookie sheets with parchment paper. Sift the dry ingredients into a medium bowl and set aside.Use an electric mixer to cream the brown sugar, butter, egg and vanilla. Once smooth, slowly add the dry mixture to the wet until well combined. Stir in the oats.Use a tablespoon-sized scoop to form equal dough balls. Allow them plenty of space to spread. Bake for 7-9 minutes. Allow the cookies to cool completely before moving off the parchment paper.Cream the shortening, powdered sugar, and vanilla together until smooth. Mix in the marshmallow fluff.To assemble: Match up two cookies that are of equal size and shape. Turn the bottom cookies over. Use a piping bag (or zip-bag with the corner cut off) to pipe the filling onto the bottom cookie. This is much easier than trying to spread it. Then add the top cookie of each cream pie and press down.I found I liked a thin layer of cream filling better than a thick layer--but you should have plenty if you want to pile it on!Makes approximately 10 cream pies. (20 cookies)'
-        )
+        ),
+        ('Banana Milo Milkshake','https://spoonacular.com/recipeImages/716351-556x370.jpg',1,'In a blender, pour in your milk, milo, banana and ice-cream and blend till smooth.Pour into a glass, spray the whipped cream on top and sprinkle the chopped strawberries on top.Serve cool.    For those that asked, here is a link on how to make whipped cream.');
+
+
 
 
 INSERT INTO users (username, password, first_name, last_name, email)
@@ -28,13 +31,7 @@ VALUES ('American'), (''), (''), ('Indian');
 
 -- copy later 
 
---   {
---     title: 'Banana Milo Milkshake',
---     instructions: '<p>In a blender, pour in your milk, milo, banana and ice-cream and blend till smooth.Pour into a glass, spray the whipped cream on top and sprinkle the chopped strawberries on top.Serve cool.    For those that asked, here is a link on how to make whipped cream.</p>',
---     image: 'https://spoonacular.com/recipeImages/716351-556x370.jpg',
---     servings: 1,
---     cuisines: []
---   },
+
 --   {
 --     title: 'Wholemeal Cake',
 --     instructions: 'In a large bowl, mix ground hazelnut, brown sugar, plain flour and wholemeal flour together and set aside.\n' +

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-// import SearchForm from "../common/SearchForm";
-// import RecipeApi from "../api/api";
+import React, { useState, useEffect, useContext } from "react";
+import RecipeApi from "../api/api";
 import RecipeCard from "./RecipeCard";
-
+import UserContext from '../Login/UserContext';
 
 function RecipeList() {
 console.debug("RecipeList");
+const { recipes } = useContext(UserContext);
 
   // const [companies, setCompanies] = useState(null);
 
@@ -21,6 +21,7 @@ console.debug("RecipeList");
   // }
 
   // if (!companies) return <LoadingSpinner />;
+  console.log(recipes);
 
   return (
     <div>

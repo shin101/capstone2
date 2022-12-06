@@ -11,9 +11,6 @@
       }
     },
     "additionalProperties": false,
-    "required": [
-      "username",
-      "password"
-    ]
+    "required": []
   }
   
