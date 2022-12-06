@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 
-const CURRENT_USER_KEY = 'current-user';
 
-function useLocalStorage(value) {
+
+function useLocalStorage(value, localStorageKey) {
   const [state, setState] = useState(
-    JSON.parse(window.localStorage.getItem(CURRENT_USER_KEY)) || value
+    JSON.parse(window.localStorage.getItem(localStorageKey)) || value
   );
 
   useEffect(() => {
     if (state) {
-      window.localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(state));
+      window.localStorage.setItem(localStorageKey, JSON.stringify(state));
     } else {
-      window.localStorage.removeItem(CURRENT_USER_KEY);
+      window.localStorage.removeItem(localStorageKey);
     }
-  }, [state])
+  }, [localStorageKey, state])
 
   return [state, setState];
 }

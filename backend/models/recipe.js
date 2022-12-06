@@ -44,44 +44,22 @@ class Recipe {
    * */
 
   static async findAll(searchFilters = {}) {
-    let query = `SELECT food_title,
+    let query = `SELECT id,
+                        food_title,
                         image,
                         servings,
                         instructions
                  FROM recipes`;
-    let whereExpressions = [];
     let queryValues = [];
 
-    // const { minEmployees, maxEmployees, name } = searchFilters;
+    const { searchTerm } = searchFilters;
 
-    // if (minEmployees > maxEmployees) {
-    //   throw new BadRequestError("Min employees cannot be greater than max");
-    // }
-
-    // For each possible search term, add to whereExpressions and queryValues so
-    // we can generate the right SQL
-
-    // if (minEmployees !== undefined) {
-    //   queryValues.push(minEmployees);
-    //   whereExpressions.push(`num_employees >= $${queryValues.length}`);
-    // }
-
-    // if (maxEmployees !== undefined) {
-    //   queryValues.push(maxEmployees);
-    //   whereExpressions.push(`num_employees <= $${queryValues.length}`);
-    // }
-
-    // if (name) {
-    //   queryValues.push(`%${name}%`);
-    //   whereExpressions.push(`name ILIKE $${queryValues.length}`);
-    // }
-
-    // if (whereExpressions.length > 0) {
-    //   query += " WHERE " + whereExpressions.join(" AND ");
-    // }
+    if (searchTerm) {
+      query += (' WHERE food_title ILIKE $1');
+      queryValues.push(`%${searchTerm}%`);
+    }
 
     // Finalize query and return results
-
     query += " ORDER BY food_title";
     const recipesRes = await db.query(query, queryValues);
     return recipesRes.rows;

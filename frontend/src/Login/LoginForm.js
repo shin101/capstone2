@@ -26,7 +26,7 @@ function LoginForm(){
   const handleSubmit = async (e) => {
     e.preventDefault();
     await login(formData);
-    navigate('/recipes');
+    navigate('/');
   }
   
   return(

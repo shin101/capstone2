@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import RecipeCard from "./RecipeCard";
 import UserContext from '../Login/UserContext';
 
@@ -25,7 +25,7 @@ const { recipes } = useContext(UserContext);
   return (
     <div>
       {recipes.map(r=>(
-        <RecipeCard {...r} /> 
+        <RecipeCard key={r.id} {...r} /> 
       ))}
       
       {/* <div className="CompanyList col-md-8 offset-md-2">

@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink, useNavigate } from "react-router-dom";
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import UserContext from '../Login/UserContext';
 import React, { useContext, useState } from "react";
@@ -10,12 +11,13 @@ import React, { useContext, useState } from "react";
 function NavBar({ logOut }) {
   const { currUser, search } = useContext(UserContext);
   const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   function loggedInNav(){
     return (
       <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">My Favorite Recipe</Navbar.Brand>
+        <NavLink to="/">My Favorite Recipe</NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -23,8 +25,8 @@ function NavBar({ logOut }) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/recipes">Browse</Nav.Link>
-            <Nav.Link href="/" onClick={logOut}>Log Out</Nav.Link>
+            <NavLink to="/recipes" onClick={() => search()}>Browse</NavLink>
+            <NavLink to="/" onClick={logOut}>Log Out</NavLink>
             {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -47,12 +49,13 @@ function NavBar({ logOut }) {
               value={searchTerm}
             />
             <Button 
-            variant="outline-success"
-            type="submit"
-            onClick={async e=>{
-              e.preventDefault();
-              search(searchTerm);
-            }}
+              variant="outline-success"
+              type="submit"
+              onClick={async e=>{
+                e.preventDefault();
+                search(searchTerm);
+                navigate('/recipes');
+              }}
             >Search</Button>
           </Form>
         </Navbar.Collapse>

@@ -9,9 +9,12 @@ import jwt from "jsonwebtoken";
 import UserContext from './Login/UserContext';
 import useLocalStorage from './hooks/localStorage';
 
+const CURRENT_USER_KEY = 'current-user';
+const TOKEN_KEY = 'token';
+
 function App() {
-  const [token, setToken] = useState(null);
-  const [currUser, setCurrUser] = useLocalStorage(null);
+  const [currUser, setCurrUser] = useLocalStorage(null, CURRENT_USER_KEY);
+  const [token, setToken] = useLocalStorage(null, TOKEN_KEY);
   const [recipes, setRecipes] = useState([]);
 
   // triggered by state change of token 
