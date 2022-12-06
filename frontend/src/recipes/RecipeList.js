@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import RecipeApi from "../api/api";
 import RecipeCard from "./RecipeCard";
 import UserContext from '../Login/UserContext';
 
@@ -25,9 +24,9 @@ const { recipes } = useContext(UserContext);
 
   return (
     <div>
-      {/* {recipes.map(r=>(
-        <RecipeCard key={...r} />
-      ))} */}
+      {recipes.map(r=>(
+        <RecipeCard {...r} /> 
+      ))}
       
       {/* <div className="CompanyList col-md-8 offset-md-2">
         <SearchForm searchFor={search} />

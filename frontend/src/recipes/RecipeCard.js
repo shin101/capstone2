@@ -1,8 +1,10 @@
 import React from "react";
 
-function RecipeCard(){
+function RecipeCard({ food_title, image, servings, instructions }){
   return (
-    <div>hi</div>
+    <div>
+      food title is {food_title}
+    </div>
   )
 }
 

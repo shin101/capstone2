@@ -8,8 +8,8 @@ function Homepage() {
 
   function loggedInHomepage(){
     return (
-      <div class='LoggedIn'>
-        <h2>Welcome back, *USERNAME*</h2>
+      <div className='LoggedIn'>
+        <h2>Welcome back, {currUser.username}</h2>
       </div>
     )
   }

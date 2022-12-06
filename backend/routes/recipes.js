@@ -23,13 +23,13 @@ router.get("/", ensureLoggedIn, async function (req, res, next){
 });
 
 // get specific food. Must be logged in
-// router.get("/:foodname", ensureLoggedIn, async function (req, res, next){
-//   try {
-//     const recipe = await Recipe.get(req.params.foodname);
-//     return res.json({ recipe });
-//   } catch (e) {
-//     return next(e);
-//   }
-// });
+router.get("/:name", ensureLoggedIn, async function (req, res, next){
+  try {
+    const recipe = await Recipe.get(req.params.name);
+    return res.json({ recipe });
+  } catch (e) {
+    return next(e);
+  }
+});
 
 module.exports = router;
