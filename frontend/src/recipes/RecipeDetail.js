@@ -1,30 +1,25 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-
+import RecipeApi from '../api/api';
 
 function RecipeDetail(){
   const { id } = useParams();
-  // const [company, setCompany] = useState(null);
+  const [recipe, setRecipe] = useState(null);
 
-
-  // useEffect(() => {
-  //   async function search(){
-  //     setCompany(await JoblyApi.getCompany(id));
-  //   }
-  //   search();
-  // }, [id]);
+  useEffect(() => {
+    async function getDetail(){
+      setRecipe(await RecipeApi.getRecipe(id)); 
+    }
+    if(id) getDetail();
+  }, [id]);
 
   return (
     <div> 
-      recipe detail here
-      {/* { <div>
-            <h3>{recipe.name}</h3> */}
-            {/* {recipe.jobs.map(j => <p> <b>{j.title}</b>
-            <p>Salary: {j.salary}</p>  <p>Equity: {j.equity}</p> */}
-          </div>
+      <h2>{recipe? recipe.food_title : ""}</h2>
+      <p>Servings: {recipe? recipe.servings : ""}</p>
+      <p>Instruction : {recipe? recipe.instructions : ""}</p>
 
-      // }
-    // </div>
+    </div>
   );
 }
 

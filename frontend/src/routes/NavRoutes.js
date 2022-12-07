@@ -12,7 +12,7 @@ function NavRoutes({ login, register }){
     <div>
       <Routes>
         <Route exact path="/recipes" element={<RecipeList />} />
-        <Route exact path="/recipes/:name" element={<RecipeDetail />} />
+        <Route exact path="/recipes/:id" element={<RecipeDetail />} />
 
         <Route exact path="/register" element={<RegisterForm />}/>
 

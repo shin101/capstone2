@@ -42,6 +42,11 @@ class RecipeApi {
     let res = await this.request('recipes/', searchTerm ? { searchTerm } : {});
     return res.recipes;
   }
+
+  static async getRecipe(id) {
+    let res = await this.request(`recipes/${id}`);
+    return res.recipe;
+  }
 }
 
 export default RecipeApi;

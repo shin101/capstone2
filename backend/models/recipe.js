@@ -65,41 +65,27 @@ class Recipe {
     return recipesRes.rows;
   }
 
-  /** Given a company handle, return data about company.
-   *
-   * Returns { handle, name, description, numEmployees, logoUrl, jobs }
-   *   where jobs is [{ id, title, salary, equity }, ...]
+  /** Given a recipe id, return data about recipe.
    *
    * Throws NotFoundError if not found.
    **/
 
-  // static async get(handle) {
-  //   const companyRes = await db.query(
-  //         `SELECT handle,
-  //                 name,
-  //                 description,
-  //                 num_employees AS "numEmployees",
-  //                 logo_url AS "logoUrl"
-  //          FROM companies
-  //          WHERE handle = $1`,
-  //       [handle]);
+  static async get(id) {
+    const res = await db.query(
+          `SELECT id,
+                  food_title,
+                  image,
+                  servings,
+                  instructions
+          FROM recipes
+          WHERE id = $1`,
+        [id]);
 
-  //   const company = companyRes.rows[0];
+    const recipe = res.rows[0];
+    if (!recipe) throw new NotFoundError(`No recipe ID: ${id}`);
 
-  //   if (!company) throw new NotFoundError(`No company: ${handle}`);
-
-  //   const jobsRes = await db.query(
-  //         `SELECT id, title, salary, equity
-  //          FROM jobs
-  //          WHERE company_handle = $1
-  //          ORDER BY id`,
-  //       [handle],
-  //   );
-
-  //   company.jobs = jobsRes.rows;
-
-  //   return company;
-  // }
+    return recipe;
+  }
 
   /** Update company data with `data`.
    *
