@@ -47,6 +47,12 @@ class RecipeApi {
     let res = await this.request(`recipes/${id}`);
     return res.recipe;
   }
+
+  static async likeRecipe(username, id) {
+    let res = await this.request(`users/${username}/recipes/${id}`, {}, "post");
+    return res.result;
+  }
+
 }
 
 export default RecipeApi;
