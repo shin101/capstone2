@@ -51,4 +51,14 @@ router.get("/:username", ensureLoggedIn, async function (req, res, next){
   }
 });
 
+// get specific user. Must have admin or correct user authorization
+router.post("/:username/recipes/:id", ensureLoggedIn, async function (req, res, next){
+  try {
+    const result = await User.likeRecipe(req.params.username, req.params.id);
+    return res.json({ result });
+  } catch (e) {
+    return next(e);
+  }
+});
+
 module.exports = router;

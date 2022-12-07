@@ -117,9 +117,45 @@ class User {
     const user = result.rows[0];
 
     if(!user) throw new NotFoundError(`No such user: ${username}`);
+    
+    const recipeResult = await db.query(
+      `SELECT recipe_id 
+       FROM users_recipes
+       WHERE username = $1`,
+       [username],
+    );
+
+    user.likedRecipes = recipeResult.rows.map(x => x.recipe_id);
+    
     return user;
   }
 
+  static async likeRecipe(username, recipeId) {
+    const result = await db.query(
+      `SELECT count(*)
+      FROM users_recipes
+      WHERE username = $1 AND recipe_id = $2`,
+      [username, recipeId],
+    );
+
+    if (+result.rows[0].count) {
+      await db.query(
+        `DELETE FROM users_recipes
+        WHERE username = $1 AND recipe_id = $2`,
+        [username, recipeId],
+      );
+
+      return { liked: false };
+    } else {
+      await db.query(
+        `INSERT INTO users_recipes (username, recipe_id, liked_at)
+        VALUES ($1, $2, NOW())`,
+        [username, recipeId],
+      );
+
+      return { liked: true };
+    }
+  }
 }
 
 module.exports = User;

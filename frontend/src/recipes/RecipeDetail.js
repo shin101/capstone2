@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import RecipeApi from '../api/api';
+import UserContext from '../Login/UserContext';
 
 function RecipeDetail(){
   const { id } = useParams();
+  const { currUser } = useContext(UserContext);
   const [recipe, setRecipe] = useState(null);
-  const [saveButton, setSaveButton] = useState(true);
+  const [liked, setLiked] = useState(Boolean(currUser.likedRecipes.find(x => x === id)));
 
   useEffect(() => {
     async function getDetail(){
@@ -14,16 +16,24 @@ function RecipeDetail(){
     if(id) getDetail();
   }, [id]);
 
+  async function likeRecipe() {
+    await RecipeApi.likeRecipe(currUser.username, id);
+    setLiked(x => !x);
+  }
+
   return (
     <div> 
-      <h2>{recipe? recipe.food_title : ""}</h2>
-      <p>Servings: {recipe? recipe.servings : ""}</p>
-      <p>Instruction : {recipe? recipe.instructions : ""}</p>
-      { saveButton?
-        <button onClick={()=>setSaveButton(false)}>Save</button> 
-      :
-        <button onClick={()=>setSaveButton(true)}>Unsave</button>}
-
+      {recipe ? 
+        <>
+          <h2>{recipe.food_title}</h2>
+          <p>Servings: {recipe.servings}</p>
+          <ol>
+            Instruction:
+            {recipe.instructions.split("#").map(x => <li key={x}>{x}</li>)}
+          </ol>
+        </>
+      : null}
+      <button onClick={likeRecipe}>{liked ? 'Unsave' : 'Save'}</button> 
     </div>
   );
 }
