@@ -24,10 +24,22 @@ VALUES ('Sweet Potato Casserole Gourmet & Holiday Baking',
         ),
         ('Banana Milo Milkshake','https://spoonacular.com/recipeImages/716351-556x370.jpg',1,'In a blender, pour in your milk, milo, banana and ice-cream and blend till smooth.
         #Pour into a glass, spray the whipped cream on top and sprinkle the chopped strawberries on top.
-        #Serve cool.');
+        #Serve cool.'),
+        ('Wholemeal Cake', 'https://spoonacular.com/recipeImages/665303-556x370.jpg',
+        4, 'In a large bowl, mix ground hazelnut, brown sugar, plain flour and wholemeal flour together and set aside. #Whisk egg whites and sugar at medium high speed till firm and smooth
+        #Use hand to fold one quarter of beaten egg whites to the flour mixture evenly and remaining egg white in two batches.
+        #Lastly add in melted butter in two batches and mix well with a rubber spatula follow by the dried apricots and dried cranberries.
+        #Pour mixture into a 7 inch (lined) round cake pan and sprinkle more dried apricots and dried cranberries over it.
+        #Bake at preheated oven 170C for about 30-35 minutes or until skewer inserted comes out clean. Leave cake to cool in pan for 15 minutes and remove to wire rack to cool down completely.'),
+        ();
 
-
-
+--   {
+--     title: 'Crabby Corn Chowder',
+--     instructions: '<ol><li>Heat a deep pot over medium heat. Add oil and butter. When butter is melted, add potatoes, celery, onion, bay leaves and chipotle peppers to the pot. Season vegetables with salt and pepper, mix well and saute until tender, about 10 minutes.</li><li>Sprinkle in flour and cook about 2 minutes, stirring constantly. Stir in clam juice and half and half and mix well.</li><li>Bring soup up to a simmer and continue to simmer for about 20 minutes, or until potatoes are soft.</li><li>Stir in corn, crab and sherry and simmer for another 5 minutes, until heated through.</li><li>Adjust the soup seasonings and remove the bay leaf.  Ladle soup into bowls and top with a few dashes of hot sauce, if desired.</li><li>Serve with some crackers, crusty bread or cornbread.</li></ol>',
+--     image: 'https://spoonacular.com/recipeImages/640336-556x370.jpg',
+--     servings: 6,
+--     cuisines: []
+--   },
 
 INSERT INTO users (username, password, first_name, last_name, email)
 VALUES ('doritos',
@@ -38,30 +50,11 @@ VALUES ('doritos',
 
 
 INSERT INTO cuisines (name)
-VALUES ('American'), (''), (''), ('Indian');
+VALUES ('American'), (''), (''), ('Indian'),(''),('');
 
 -- copy later 
 
 
---   {
---     title: 'Wholemeal Cake',
---     instructions: 'In a large bowl, mix ground hazelnut, brown sugar, plain flour and wholemeal flour together and set aside.\n' +
---       'Whisk egg whites and sugar at medium high speed till firm and smooth.\n' +
---       'Use hand to fold one quarter of beaten egg whites to the flour mixture evenly and remaining egg white in two batches.\n' +
---       'Lastly add in melted butter in two batches and mix well with a rubber spatula follow by the dried apricots and dried cranberries.\n' +
---       'Pour mixture into a 7 inch (lined) round cake pan and sprinkle more dried apricots and dried cranberries over it.\n' +
---       'Bake at preheated oven 170C for about 30-35 minutes or until skewer inserted comes out clean. Leave cake to cool in pan for 15 minutes and remove to wire rack to cool down completely.',
---     image: 'https://spoonacular.com/recipeImages/665303-556x370.jpg',
---     servings: 4,
---     cuisines: []
---   },
---   {
---     title: 'Crabby Corn Chowder',
---     instructions: '<ol><li>Heat a deep pot over medium heat. Add oil and butter. When butter is melted, add potatoes, celery, onion, bay leaves and chipotle peppers to the pot. Season vegetables with salt and pepper, mix well and saute until tender, about 10 minutes.</li><li>Sprinkle in flour and cook about 2 minutes, stirring constantly. Stir in clam juice and half and half and mix well.</li><li>Bring soup up to a simmer and continue to simmer for about 20 minutes, or until potatoes are soft.</li><li>Stir in corn, crab and sherry and simmer for another 5 minutes, until heated through.</li><li>Adjust the soup seasonings and remove the bay leaf.  Ladle soup into bowls and top with a few dashes of hot sauce, if desired.</li><li>Serve with some crackers, crusty bread or cornbread.</li></ol>',
---     image: 'https://spoonacular.com/recipeImages/640336-556x370.jpg',
---     servings: 6,
---     cuisines: []
---   },
 --   {
 --     title: 'Vegan Taco bowls with Cilantro Lime Cauliflower Rice',
 --     instructions: '<ol><li>Set the nuts to soak in a bowl of water 2-8 hours before preparing the meat.</li><li>Preheat the oven to 375 F and line a baking sheet with aluminum foil.</li><li>Finely chop the cauliflower into rice-sized pieces, or pulse in the food processor until the desired consistency. Toss with the oil and spread onto the baking sheet in an even layer. Bake for 18 minutes, stirring halfway through.</li><li>While the cauliflower rice is cooking, prepare the guacamole and taco meat.</li><li>Cut the avocado into large chunks and place into a small bowl. Add the lime juice and mash the avocado to a chunky puree or your preferred consistency. Stir in the cilantro, jalapeno, onion and spices. Set aside.</li><li>Remove the nuts from the water and place into a small food processor. Discard the water. Pulse the nuts until theyve reached a ground meat consistency, I find about 5-7 pulses works. Transfer to a bowl and stir in the salt, cumin, garlic powder, and red chili powder. Set aside.</li><li>When the cauliflower is done, transfer to a mixing bowl while still warm and stir in the lime, cilantro, and salt.</li><li>To assemble the bowls, layer 1 cup of the cauliflower rice in a bowl with taco nut meat, a dollop of guacamole, fresh tomatoes, and a sprinkling of fresh cilantro.</li><li>Serve immediately with an additional slice of lime if desired.</li></ol>',

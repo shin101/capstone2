@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import UserContext from './UserContext';
 import Button from 'react-bootstrap/Button';
+import './Form.css';
 
 
 function RegisterForm(){
