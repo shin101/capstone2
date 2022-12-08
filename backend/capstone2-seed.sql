@@ -12,24 +12,21 @@ VALUES ('Sweet Potato Casserole Gourmet & Holiday Baking',
         #Then add the top cookie of each cream pie and press down.
         #I found I liked a thin layer of cream filling better than a thick layer--but you should have plenty if you want to pile it on!
         #Makes approximately 10 cream pies. (20 cookies)' ), ('Banana Milo Milkshake','https://spoonacular.com/recipeImages/716351-556x370.jpg',1,
-'In a blender, pour in your milk, milo, banana and ice-cream and blend till smooth.
+        'In a blender, pour in your milk, milo, banana and ice-cream and blend till smooth.
         #Pour into a glass, spray the whipped cream on top and sprinkle the chopped strawberries on top.
-        #Serve cool.'), ('Wholemeal Cake',
-                         'https://spoonacular.com/recipeImages/665303-556x370.jpg',
-                         4,
-                         'In a large bowl, mix ground hazelnut, brown sugar, plain flour and wholemeal flour together and set aside. #Whisk egg whites and sugar at medium high speed till firm and smooth
+        #Serve cool.'), ('Wholemeal Cake','https://spoonacular.com/recipeImages/665303-556x370.jpg',4,'In a large bowl, mix ground hazelnut, brown sugar, plain flour and wholemeal flour together and set aside. #Whisk egg whites and sugar at medium high speed till firm and smooth
         #Use hand to fold one quarter of beaten egg whites to the flour mixture evenly and remaining egg white in two batches.
         #Lastly add in melted butter in two batches and mix well with a rubber spatula follow by the dried apricots and dried cranberries.
         #Pour mixture into a 7 inch (lined) round cake pan and sprinkle more dried apricots and dried cranberries over it.
-        #Bake at preheated oven 170C for about 30-35 minutes or until skewer inserted comes out clean. Leave cake to cool in pan for 15 minutes and remove to wire rack to cool down completely.');
+        #Bake at preheated oven 170C for about 30-35 minutes or until skewer inserted comes out clean. Leave cake to cool in pan for 15 minutes and remove to wire rack to cool down completely.'),
+        ('Crabby Corn Chowder','https://spoonacular.com/recipeImages/640336-556x370.jpg',6,
+        'Heat a deep pot over medium heat. Add oil and butter. When butter is melted, add potatoes, celery, onion, bay leaves and chipotle peppers to the pot. #Season vegetables with salt and pepper, mix well and saute until tender, about 10 minutes. #Sprinkle in flour and cook about 2 minutes, stirring constantly. Stir in clam juice and half and half and mix well. #Bring soup up to a simmer and continue to simmer for about 20 minutes, or until potatoes are soft. #Stir in corn, crab and sherry and simmer for another 5 minutes, until heated through.#Adjust the soup seasonings and remove the bay leaf.  Ladle soup into bowls and top with a few dashes of hot sauce, if desired.#Serve with some crackers, crusty bread or cornbread.'
+        ),
+        ('Mango Salsa','https://spoonacular.com/recipeImages/716290-556x370.jpg',1,'Peel and chop your mango into small cubes #Cube your bell peppers and onions as well and mix in with the mangoes. Add the cherry tomatoes and mix in.sprinkle your sugar and lime juice over it.#Chop your scent/mint leaves and mix in and refrigerate.#Serve cool as a side dish or if you want something refreshing on a hot day.'),
+        ('Tangy & Savory Mexican Soup','https://spoonacular.com/recipeImages/662850-556x370.jpg',8,
+        'Lightly brown beef or chicken, make sure there is still some pink. If you brown it too much it will taste "dry" in the soup. #Bring stock to a boil with tomato paste/sauce. Stir in meat, garlic, chili flakes, zucchini, carrots, onions &amp; bell peppers. Simmer for about 15-30 minutes or till veggies are tender, but still slightly crunchy.#Add in lime juice and season to taste with oregano, rosemary, thyme, sea salt &amp; pepper. Serve with garnishes.');
 
---   {
---     title: 'Crabby Corn Chowder',
---     instructions: '<ol><li>Heat a deep pot over medium heat. Add oil and butter. When butter is melted, add potatoes, celery, onion, bay leaves and chipotle peppers to the pot. Season vegetables with salt and pepper, mix well and saute until tender, about 10 minutes.</li><li>Sprinkle in flour and cook about 2 minutes, stirring constantly. Stir in clam juice and half and half and mix well.</li><li>Bring soup up to a simmer and continue to simmer for about 20 minutes, or until potatoes are soft.</li><li>Stir in corn, crab and sherry and simmer for another 5 minutes, until heated through.</li><li>Adjust the soup seasonings and remove the bay leaf.  Ladle soup into bowls and top with a few dashes of hot sauce, if desired.</li><li>Serve with some crackers, crusty bread or cornbread.</li></ol>',
---     image: 'https://spoonacular.com/recipeImages/640336-556x370.jpg',
---     servings: 6,
---     cuisines: []
---   },
+
 
 INSERT INTO users (username, password, first_name, last_name, email)
 VALUES ('doritos',
@@ -40,7 +37,7 @@ VALUES ('doritos',
 
 
 INSERT INTO cuisines (name)
-VALUES ('American'), ('Indian'), ('');
+VALUES ('American'), ('Indian'), ('Mexican');
 
 -- copy later
  --   {
@@ -57,20 +54,7 @@ VALUES ('American'), ('Indian'), ('');
 --     servings: 12,
 --     cuisines: []
 --   },
---   {
---     title: 'Tangy & Savory Mexican Soup',
---     instructions: '<ol><li>Lightly brown beef or chicken, make sure there is still some pink. If you brown it too much it will taste "dry" in the soup.</li><li>Bring stock to a boil with tomato paste/sauce. Stir in meat, garlic, chili flakes, zucchini, carrots, onions &amp; bell peppers. Simmer for about 15-30 minutes or till veggies are tender, but still slightly crunchy.</li><li>Add in lime juice and season to taste with oregano, rosemary, thyme, sea salt &amp; pepper. Serve with garnishes.</li></ol>',
---     image: 'https://spoonacular.com/recipeImages/662850-556x370.jpg',
---     servings: 8,
---     cuisines: [ 'Mexican' ]
---   },
---   {
---     title: 'Mango Salsa',
---     instructions: 'Peel and chop your mango into small cubesCube your bell peppers and onions as well and mix in with the mangoes. Add the cherry tomatoes and mix in.sprinkle your sugar and lime juice over it.Chop your scent/mint leaves and mix in and refrigerate.Serve cool as a side dish or if you want something refreshing on a hot day.',
---     image: 'https://spoonacular.com/recipeImages/716290-556x370.jpg',
---     servings: 1,
---     cuisines: [ 'Mexican' ]
---   },
+
 --   {
 --     title: 'Captain America Shield Cookies',
 --     instructions: 'Line a baking sheet with wax paper. Microwave your candy and coconut oil in 30-second intervals until completely melted. Mix thoroughly.\n' +

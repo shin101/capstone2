@@ -15,9 +15,9 @@ function NavBar({ logOut }) {
 
   function loggedInNav(){
     return (
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="lg" className="loggedinNav">
       <Container fluid>
-        <NavLink to="/">My Favorite Recipe</NavLink>
+        <Navbar.Brand href="/">My Favorite Recipe</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -25,8 +25,8 @@ function NavBar({ logOut }) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <NavLink to="/recipes" onClick={() => search()}>Browse</NavLink>
-            <NavLink to="/" onClick={logOut}>Log Out</NavLink>
+            <Nav.Link href="/recipes" onClick={() => search()}>Browse</Nav.Link>
+            <Nav.Link href="/" onClick={logOut}>Log Out</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

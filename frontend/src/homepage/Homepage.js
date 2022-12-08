@@ -11,10 +11,10 @@ function Homepage() {
   return currUser ? 
     (<div>
       <h2 className='LoggedIn'>Welcome back, {currUser.username}</h2>
-      <h4>Liked Recipes</h4>
+      <h4>Saved Recipes</h4>
       {currUser.likedRecipes.length ? recipes.filter(r => currUser.likedRecipes.includes(r.id)).map(r=>(
         <RecipeCard key={r.id} {...r} /> 
-      )) : <p>You have no liked recipe</p>}
+      )) : <p>You have no liked recipe. </p>}
     </div>) : (
     <div>
       <h2 className="LoggedOutHomepage">Get your next dinner idea.</h2>
