@@ -2,36 +2,26 @@ INSERT INTO recipes (food_title, image, servings, instructions)
 VALUES ('Sweet Potato Casserole Gourmet & Holiday Baking',
         'https://spoonacular.com/recipeImages/715380-556x370.jpg',
         3,
-        'Take your sweet potato mixture and place in a prepared 9 x 13 glass baking dish.#Cover the top with finely chopped sugar pecans.#Bake for 30 minutes or until the topping is lightly browned.#Serve warm as a side dish, or add some vanilla ice cream to the side and serve as a dessert. It really is THAT good.'),
-        ('Tuscan White Bean Soup with Olive Oil and Rosemary',
-        'https://spoonacular.com/recipeImages/664147-556x370.jpg',
-        6,
-        'Rinse the beans thoroughly and place them in a 7-quart slow cooker along with the water, onion, garlic, and bay leaf. #Cover and cook on LOW for about 8 hours, or until the beans are nice and tender.
+        'Take your sweet potato mixture and place in a prepared 9 x 13 glass baking dish.#Cover the top with finely chopped sugar pecans.#Bake for 30 minutes or until the topping is lightly browned.#Serve warm as a side dish, or add some vanilla ice cream to the side and serve as a dessert. It really is THAT good.'), ('Tuscan White Bean Soup with Olive Oil and Rosemary','https://spoonacular.com/recipeImages/664147-556x370.jpg',6,'Rinse the beans thoroughly and place them in a 7-quart slow cooker along with the water, onion, garlic, and bay leaf. #Cover and cook on LOW for about 8 hours, or until the beans are nice and tender.
         #Remove the bay leaf. Using a handheld immersion blender, puree the remaining ingredients to the desired texture. 
         #Add the salt to taste.Ladle the soup into bowls. 
-        #Drizzle with the olive oil, sprinkle with rosemary, and serve.'
-        ),
-        ('Homemade Oatmeal Cream Pies',
-        'https://spoonacular.com/recipeImages/647046-556x370.jpg',
-        10,
-        'Preheat the oven to 350 degrees F.Line cookie sheets with parchment paper. 
+        #Drizzle with the olive oil, sprinkle with rosemary, and serve.' ), ('Homemade Oatmeal Cream Pies','https://spoonacular.com/recipeImages/647046-556x370.jpg',10,'Preheat the oven to 350 degrees F.Line cookie sheets with parchment paper. 
         #Sift the dry ingredients into a medium bowl and set aside.
         #Use an electric mixer to cream the brown sugar, butter, egg and vanilla. Once smooth, slowly add the dry mixture to the wet until well combined. Stir in the oats.Use a tablespoon-sized scoop to form equal dough balls. 
         #Allow them plenty of space to spread. Bake for 7-9 minutes. Allow the cookies to cool completely before moving off the parchment paper.Cream the shortening, powdered sugar, and vanilla together until smooth. Mix in the marshmallow fluff.To assemble: Match up two cookies that are of equal size and shape. Turn the bottom cookies over. Use a piping bag (or zip-bag with the corner cut off) to pipe the filling onto the bottom cookie. This is much easier than trying to spread it. 
         #Then add the top cookie of each cream pie and press down.
         #I found I liked a thin layer of cream filling better than a thick layer--but you should have plenty if you want to pile it on!
-        #Makes approximately 10 cream pies. (20 cookies)'
-        ),
-        ('Banana Milo Milkshake','https://spoonacular.com/recipeImages/716351-556x370.jpg',1,'In a blender, pour in your milk, milo, banana and ice-cream and blend till smooth.
+        #Makes approximately 10 cream pies. (20 cookies)' ), ('Banana Milo Milkshake','https://spoonacular.com/recipeImages/716351-556x370.jpg',1,
+'In a blender, pour in your milk, milo, banana and ice-cream and blend till smooth.
         #Pour into a glass, spray the whipped cream on top and sprinkle the chopped strawberries on top.
-        #Serve cool.'),
-        ('Wholemeal Cake', 'https://spoonacular.com/recipeImages/665303-556x370.jpg',
-        4, 'In a large bowl, mix ground hazelnut, brown sugar, plain flour and wholemeal flour together and set aside. #Whisk egg whites and sugar at medium high speed till firm and smooth
+        #Serve cool.'), ('Wholemeal Cake',
+                         'https://spoonacular.com/recipeImages/665303-556x370.jpg',
+                         4,
+                         'In a large bowl, mix ground hazelnut, brown sugar, plain flour and wholemeal flour together and set aside. #Whisk egg whites and sugar at medium high speed till firm and smooth
         #Use hand to fold one quarter of beaten egg whites to the flour mixture evenly and remaining egg white in two batches.
         #Lastly add in melted butter in two batches and mix well with a rubber spatula follow by the dried apricots and dried cranberries.
         #Pour mixture into a 7 inch (lined) round cake pan and sprinkle more dried apricots and dried cranberries over it.
-        #Bake at preheated oven 170C for about 30-35 minutes or until skewer inserted comes out clean. Leave cake to cool in pan for 15 minutes and remove to wire rack to cool down completely.'),
-        ();
+        #Bake at preheated oven 170C for about 30-35 minutes or until skewer inserted comes out clean. Leave cake to cool in pan for 15 minutes and remove to wire rack to cool down completely.');
 
 --   {
 --     title: 'Crabby Corn Chowder',
@@ -50,12 +40,10 @@ VALUES ('doritos',
 
 
 INSERT INTO cuisines (name)
-VALUES ('American'), (''), (''), ('Indian'),(''),('');
+VALUES ('American'), ('Indian'), ('');
 
--- copy later 
-
-
---   {
+-- copy later
+ --   {
 --     title: 'Vegan Taco bowls with Cilantro Lime Cauliflower Rice',
 --     instructions: '<ol><li>Set the nuts to soak in a bowl of water 2-8 hours before preparing the meat.</li><li>Preheat the oven to 375 F and line a baking sheet with aluminum foil.</li><li>Finely chop the cauliflower into rice-sized pieces, or pulse in the food processor until the desired consistency. Toss with the oil and spread onto the baking sheet in an even layer. Bake for 18 minutes, stirring halfway through.</li><li>While the cauliflower rice is cooking, prepare the guacamole and taco meat.</li><li>Cut the avocado into large chunks and place into a small bowl. Add the lime juice and mash the avocado to a chunky puree or your preferred consistency. Stir in the cilantro, jalapeno, onion and spices. Set aside.</li><li>Remove the nuts from the water and place into a small food processor. Discard the water. Pulse the nuts until theyve reached a ground meat consistency, I find about 5-7 pulses works. Transfer to a bowl and stir in the salt, cumin, garlic powder, and red chili powder. Set aside.</li><li>When the cauliflower is done, transfer to a mixing bowl while still warm and stir in the lime, cilantro, and salt.</li><li>To assemble the bowls, layer 1 cup of the cauliflower rice in a bowl with taco nut meat, a dollop of guacamole, fresh tomatoes, and a sprinkling of fresh cilantro.</li><li>Serve immediately with an additional slice of lime if desired.</li></ol>',
 --     image: 'https://spoonacular.com/recipeImages/664501-556x370.jpg',

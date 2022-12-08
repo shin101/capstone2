@@ -29,7 +29,7 @@ function LoginForm(){
   
   return(
     <div>
-      <h4>Welcome Back.</h4>
+      <h4 className='login-header'>Welcome Back.</h4>
       <form onSubmit={handleSubmit}>
           <div>
             <input

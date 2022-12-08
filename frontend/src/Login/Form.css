@@ -8,9 +8,12 @@ body {
     background-attachment: fixed;
     background-size: auto;
     background-repeat: no-repeat;
-
-
 }
+
+h2 {
+    margin-top: 130px;
+}
+
 form {
     display: inline-block;
  
@@ -48,4 +51,8 @@ form {
 #save-button:hover{
     font-weight: 500;
     background: rgb(220, 240, 225);
+}
+
+.login-header{
+    margin-top: 130px;
 }
