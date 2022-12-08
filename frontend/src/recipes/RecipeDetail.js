@@ -44,7 +44,7 @@ function RecipeDetail(){
           </ol>
         </>
       : null}
-      <button onClick={likeRecipe}>{liked ? 'Unsave' : 'Save'}</button> 
+      <button id="save-button" onClick={likeRecipe}>{liked ? 'Unsave' : 'Save'}</button> 
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom'
 import UserContext from './UserContext';
-import Button from 'react-bootstrap/Button';
 import './Form.css';
 
 
@@ -34,6 +33,7 @@ function LoginForm(){
       <form onSubmit={handleSubmit}>
           <div>
             <input
+              id="field"
               name="username"
               placeholder="username"
               value={formData.username}
@@ -42,15 +42,16 @@ function LoginForm(){
           </div>
           <div>
             <input
+            id="field"
             name="password"
             placeholder="password"
             value={formData.password}
             onChange={handleChange}
             />
           </div>
-          <Button variant="primary" type="submit">Login</Button>
+          <button id="form-button" type="submit">Login</button>
       </form>
-      <p>Not a member? <NavLink to="/register">Sign Up</NavLink></p>
+      <p>Not a member? <NavLink to="/">Sign Up</NavLink></p>
     </div>
   )
 
