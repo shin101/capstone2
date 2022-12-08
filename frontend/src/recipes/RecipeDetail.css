@@ -13,3 +13,16 @@ ol{
     /* margin-top: 100px; */
 }
 
+#save-button{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 140px; 
+    background: #e8dcb9;
+    font-size: 17px;
+    border-radius: 20px;
+}
+
+#save-button:hover {
+    background: #e9cf7f;
+}
