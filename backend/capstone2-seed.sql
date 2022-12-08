@@ -24,7 +24,20 @@ VALUES ('Sweet Potato Casserole Gourmet & Holiday Baking',
         ),
         ('Mango Salsa','https://spoonacular.com/recipeImages/716290-556x370.jpg',1,'Peel and chop your mango into small cubes #Cube your bell peppers and onions as well and mix in with the mangoes. Add the cherry tomatoes and mix in.sprinkle your sugar and lime juice over it.#Chop your scent/mint leaves and mix in and refrigerate.#Serve cool as a side dish or if you want something refreshing on a hot day.'),
         ('Tangy & Savory Mexican Soup','https://spoonacular.com/recipeImages/662850-556x370.jpg',8,
-        'Lightly brown beef or chicken, make sure there is still some pink. If you brown it too much it will taste "dry" in the soup. #Bring stock to a boil with tomato paste/sauce. Stir in meat, garlic, chili flakes, zucchini, carrots, onions &amp; bell peppers. Simmer for about 15-30 minutes or till veggies are tender, but still slightly crunchy.#Add in lime juice and season to taste with oregano, rosemary, thyme, sea salt &amp; pepper. Serve with garnishes.');
+        'Lightly brown beef or chicken, make sure there is still some pink. If you brown it too much it will taste "dry" in the soup. #Bring stock to a boil with tomato paste/sauce. Stir in meat, garlic, chili flakes, zucchini, carrots, onions &amp; bell peppers. Simmer for about 15-30 minutes or till veggies are tender, but still slightly crunchy.#Add in lime juice and season to taste with oregano, rosemary, thyme, sea salt &amp; pepper. Serve with garnishes.'),
+        ('Vegan Taco bowls with Cilantro Lime Cauliflower Rice',
+        'https://spoonacular.com/recipeImages/664501-556x370.jpg', 4,
+        'Set the nuts to soak in a bowl of water 2-8 hours before preparing the meat.Preheat the oven to 375 F and line a baking sheet with aluminum foil.Finely chop the cauliflower into rice-sized pieces, or pulse in the food processor until the desired consistency. #Toss with the oil and spread onto the baking sheet in an even layer. Bake for 18 minutes, stirring halfway through.While the cauliflower rice is cooking, prepare the guacamole and taco meat.Cut the avocado into large chunks and place into a small bowl. #Add the lime juice and mash the avocado to a chunky puree or your preferred consistency. Stir in the cilantro, jalapeno, onion and spices. Set aside.Remove the nuts from the water and place into a small food processor. Discard the water. Pulse the nuts until theyve reached a ground meat consistency, I find about 5-7 pulses works. Transfer to a bowl and stir in the salt, cumin, garlic powder, and red chili powder. Set aside.When the cauliflower is done, transfer to a mixing bowl while still warm and stir in the lime, cilantro, and salt.#To assemble the bowls, layer 1 cup of the cauliflower rice in a bowl with taco nut meat, a dollop of guacamole, fresh tomatoes, and a sprinkling of fresh cilantro.Serve immediately with an additional slice of lime if desired');
+
+        -- ('Captain America Shield Cookies',
+        -- 'https://spoonacular.com/recipeImages/993462-556x370.jpg',
+        -- 12,
+        -- 'Line a baking sheet with wax paper. Microwave your candy and coconut oil in 30-second intervals until completely melted. Mix thoroughly.
+        -- #Using a fork, dip each sugar cookie into the melted candy and set carefully on lined baking sheet. Allow to set in the refrigerator for about one hour.
+        -- #Dust a clean working surface with cornstarch and start rolling out your fondant. Cut your white fondant with the largest cookie cutter and then using the 1.5 inch cookie cutter, cut a hole in the middle of it.
+        -- #Using your smallest circular cookie cutter, cut out blue fondant circles. Cut star shapes from the white fondant and use buttercream to glue it onto your blue fondant circles.
+        -- #Once the coated cookies are set, remove them fridge and start assembling. Using your buttercream as the glue, place your large white circle, then the blue one (with the star). Enjoy!'
+        -- );
 
 
 
@@ -39,30 +52,5 @@ VALUES ('doritos',
 INSERT INTO cuisines (name)
 VALUES ('American'), ('Indian'), ('Mexican');
 
--- copy later
- --   {
---     title: 'Vegan Taco bowls with Cilantro Lime Cauliflower Rice',
---     instructions: '<ol><li>Set the nuts to soak in a bowl of water 2-8 hours before preparing the meat.</li><li>Preheat the oven to 375 F and line a baking sheet with aluminum foil.</li><li>Finely chop the cauliflower into rice-sized pieces, or pulse in the food processor until the desired consistency. Toss with the oil and spread onto the baking sheet in an even layer. Bake for 18 minutes, stirring halfway through.</li><li>While the cauliflower rice is cooking, prepare the guacamole and taco meat.</li><li>Cut the avocado into large chunks and place into a small bowl. Add the lime juice and mash the avocado to a chunky puree or your preferred consistency. Stir in the cilantro, jalapeno, onion and spices. Set aside.</li><li>Remove the nuts from the water and place into a small food processor. Discard the water. Pulse the nuts until theyve reached a ground meat consistency, I find about 5-7 pulses works. Transfer to a bowl and stir in the salt, cumin, garlic powder, and red chili powder. Set aside.</li><li>When the cauliflower is done, transfer to a mixing bowl while still warm and stir in the lime, cilantro, and salt.</li><li>To assemble the bowls, layer 1 cup of the cauliflower rice in a bowl with taco nut meat, a dollop of guacamole, fresh tomatoes, and a sprinkling of fresh cilantro.</li><li>Serve immediately with an additional slice of lime if desired.</li></ol>',
---     image: 'https://spoonacular.com/recipeImages/664501-556x370.jpg',
---     servings: 4,
---     cuisines: [ 'Mexican' ]
---   },
---   {
---     title: 'Carrot Quinoa Muffins',
---     instructions: '<p>Muffins</p><ol><li>Preheat the oven to 350F. Grease or line a muffin tin with paper liners and set aside.</li><li>In a large bowl, mix quinoa, sugar, flours, baking soda, cinnamon, ginger, nutmeg, allspice, and salt.</li><li>In a smaller bowl, mix coconut oil, Chobani pineapple greek yogurt, vanilla, and eggs.</li><li>Add the wet ingredients to the dry ingredients .. then gently fold in the carrots, coconut, and walnuts .. until just mixed.</li><li>Divide the batter evenly such that none of the muffin tins is filled more than 3/4 full (ish 16 standard size muffins)</li><li>Bake 20-25 minutes, until golden brown and a toothpick inserted comes out clean.[br]</li></ol><p>Coconut Whip</p><ol><li>Open the can of coconut milk and scoop the top layer of white, fatty goodness into a decent sized mixing bowl (discard the coconut water or save it for smoothies). </li><li>Blend the chunks of coconut milk with a hand mixer on high speed for 15-20 seconds, just until the mixture turns to liquid. </li><li>Sift in the powdered sugar (amount depends on how sweet you like it) and mix until combined. </li><li>Add the vanilla extract and blend on high speed for 1-2 minutes, until light and creamy. </li><li>Whipped cream is best served immideately, but can be stored in an air tight container for up to three days. It will harden in the fridge, so when ready to serve, simply blend with a hand mixer on high speed until creamy again.</li></ol>',
---     image: undefined,
---     servings: 12,
---     cuisines: []
---   },
 
---   {
---     title: 'Captain America Shield Cookies',
---     instructions: 'Line a baking sheet with wax paper. Microwave your candy and coconut oil in 30-second intervals until completely melted. Mix thoroughly.\n' +
---       'Using a fork, dip each sugar cookie into the melted candy and set carefully on lined baking sheet. Allow to set in the refrigerator for about one hour.\n' +
---       'Dust a clean working surface with cornstarch and start rolling out your fondant. Cut your white fondant with the largest cookie cutter and then using the 1.5 inch cookie cutter, cut a hole in the middle of it.\n' +
---       'Using your smallest circular cookie cutter, cut out blue fondant circles. Cut star shapes from the white fondant and use buttercream to glue it onto your blue fondant circles.\n' +
---       'Once the coated cookies are set, remove them fridge and start assembling. Using your buttercream as the glue, place your large white circle, then the blue one (with the star). Enjoy!',
---     image: 'https://spoonacular.com/recipeImages/993462-556x370.jpg',
---     servings: 12,
---     cuisines: []
---   }
+

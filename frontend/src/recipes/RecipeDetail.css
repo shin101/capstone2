@@ -1,0 +1,15 @@
+ol{
+    text-align: left;
+
+}
+
+.detail{
+    background-color: rgba(243, 242, 241, 0.903);
+    max-width: 700px;
+    display: inline-block;
+
+    /* display: inline-block;
+    height: 600px; */
+    /* margin-top: 100px; */
+}
+
