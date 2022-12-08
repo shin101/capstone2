@@ -26,6 +26,7 @@ function App() {
       RecipeApi.token = token;
       const currUser = await RecipeApi.getUser(payload.username);
       setCurrUser(currUser);
+      search();
     }
     if (token){
       loadCurrentUser();
@@ -60,13 +61,10 @@ function App() {
     setToken(null);
   }
 
-
-
-
   return (
     <div>
       <BrowserRouter>
-        <UserContext.Provider value={{ currUser, register, login, search, recipes, setRecipes }}>
+        <UserContext.Provider value={{ currUser, register, login, search, recipes, setCurrUser, setRecipes }}>
           <NavBar logOut={logOut} />
           <NavRoutes />
         </UserContext.Provider>

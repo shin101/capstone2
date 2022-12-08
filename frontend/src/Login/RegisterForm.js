@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import UserContext from './UserContext';
 import Button from 'react-bootstrap/Button';
 
@@ -76,7 +76,7 @@ function RegisterForm(){
 
           <Button variant="primary" type="submit">Sign Me Up!</Button>
       </form>
-      <p>Already a member? <a href="/login">Login</a></p>
+      <p>Already a member? <NavLink to="/login">Login</NavLink></p>
 
     </div>
   )

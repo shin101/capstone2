@@ -5,7 +5,7 @@ import UserContext from '../Login/UserContext';
 
 function RecipeDetail(){
   const { id } = useParams();
-  const { currUser } = useContext(UserContext);
+  const { currUser, setCurrUser } = useContext(UserContext);
   const [recipe, setRecipe] = useState(null);
   const [liked, setLiked] = useState(Boolean(currUser.likedRecipes.find(x => x === id)));
 
@@ -17,8 +17,19 @@ function RecipeDetail(){
   }, [id]);
 
   async function likeRecipe() {
-    await RecipeApi.likeRecipe(currUser.username, id);
+    const result = await RecipeApi.likeRecipe(currUser.username, id);
     setLiked(x => !x);
+    if (result.liked) {
+      setCurrUser(user => ({
+        ...user,
+        likedRecipes: [...user.likedRecipes, id], 
+      }));
+    } else {
+      setCurrUser(user => ({
+        ...user,
+        likedRecipes: user.likedRecipes.filter(r => r !== id), 
+      }));
+    }
   }
 
   return (

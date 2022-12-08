@@ -1,9 +1,19 @@
 .LoggedIn {
-
+  background-image: url("https://media.tenor.com/pK6hhq40TB0AAAAM/moving-wallpaper-wallpaper.gif");
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   align-items: center;
-
-  
 }
+
+  .LoggedOutHomepage {
+    background-image: url("https://media.tenor.com/pK6hhq40TB0AAAAM/moving-wallpaper-wallpaper.gif");
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-items: center;
+}
+
 form {
   display: inline-block;
 }

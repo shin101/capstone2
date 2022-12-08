@@ -2,31 +2,26 @@ import React, { useContext } from "react";
 import "./Homepage.css"
 import UserContext from "../Login/UserContext";
 import RegisterForm from "../Login/RegisterForm";
+import RecipeCard from "../recipes/RecipeCard";
+
 
 function Homepage() {
-  const { currUser } = useContext(UserContext);
+  const { currUser, recipes } = useContext(UserContext);
 
-  function loggedInHomepage(){
-    return (
-      <div className='LoggedIn'>
-        <h2>Welcome back, {currUser.username}</h2>
-      </div>
-    )
-  }
-
-  function loggedOutHomepage(){
-    return (
-      <div className="Homepage">
-        <h2 className="text-center">Get your next dinner idea.</h2>
-        <h3>Sign up today</h3>
-        <RegisterForm />
-
-      
-      </div>
-    )
-  }
-
-  return currUser? loggedInHomepage() : loggedOutHomepage();
+  return currUser ? 
+    (<div>
+      <h2 className='LoggedIn'>Welcome back, {currUser.username}</h2>
+      <h4>Liked Recipes</h4>
+      {currUser.likedRecipes.length ? recipes.filter(r => currUser.likedRecipes.includes(r.id)).map(r=>(
+        <RecipeCard key={r.id} {...r} /> 
+      )) : <p>No liked recipes</p>}
+    </div>) : (
+    <div>
+      <h2 className="LoggedOutHomepage">Get your next dinner idea.</h2>
+      <h3>Sign up today</h3>
+      <RegisterForm />
+    </div>
+  );
 }
 
 export default Homepage;

@@ -27,17 +27,6 @@ function NavBar({ logOut }) {
           >
             <NavLink to="/recipes" onClick={() => search()}>Browse</NavLink>
             <NavLink to="/" onClick={logOut}>Log Out</NavLink>
-            {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown> */}
-
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -68,7 +57,7 @@ function NavBar({ logOut }) {
     return (
       <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="/">My Favorite Recipe</Navbar.Brand>
+          <Navbar.Brand onClick={() => navigate('/')}>My Favorite Recipe</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
