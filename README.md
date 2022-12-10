@@ -2,7 +2,7 @@
 
 This app is perfect for anyone looking for ideas or inspirations for recipes. Users will be able to sign up, login, browse through different recipes and save them. Access the site here : https://my-favorite-recipe.surge.sh/
 
-![your feed] (https://github.com/shin101/capstone2/blob/main/feed.png?raw=true)
+![feed](https://github.com/shin101/capstone2/blob/main/feed.png?raw=true)
 
 ### Target Audience
 This app is for anyone but the main foucs will be for those in the 20-40s age group. However, this app will have simple UI that have just enough features for senior citizens to easily navigate as well. 
