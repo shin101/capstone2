@@ -1,4 +1,16 @@
+.card {
+    background-color: rgb(222, 189, 225);
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em;
+}
+
+.card a {
+    text-decoration: none;
+}
+
 img {
     border-radius: 10px;
+    background-clip: padding-box;
 }
 

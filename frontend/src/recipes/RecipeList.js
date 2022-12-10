@@ -7,7 +7,7 @@ function RecipeList() {
   const { recipes } = useContext(UserContext);
 
   return (
-    <div>
+    <div className="RecipeList">
       {recipes.map(r=>(
         <RecipeCard key={r.id} {...r} /> 
       ))}

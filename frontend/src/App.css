@@ -6,7 +6,9 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow-y: scroll;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -45,4 +47,11 @@
 
 a {
   color: #282c34;
+}
+
+.RecipeList {
+  padding-top: 2em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
