@@ -1,14 +1,10 @@
-
--- SET DEFAULT "hello"
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
 CREATE TABLE cuisines (
-  id uuid DEFAULT uuid_generate_v4() PRIMARY KEY, 
+  id uuid DEFAULT gen_random_uuid() PRIMARY KEY, 
   name TEXT
 );
 
 CREATE TABLE recipes (
-  id uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
   cuisine_id uuid REFERENCES cuisines ON DELETE CASCADE,
   food_title TEXT NOT NULL,
   image TEXT,

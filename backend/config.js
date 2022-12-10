@@ -13,7 +13,7 @@ const PORT = +process.env.PORT || 3001;
 function getDatabaseUri() {
   return (process.env.NODE_ENV === "test")
       ? "capstone2_test"
-      : process.env.DATABASE_URL || "capstone2";
+      : process.env.HEROKU_POSTGRESQL_NAVY_URL || "capstone2";
 }
 
 // Speed up bcrypt during tests, since the algorithm safety isn't being tested
@@ -22,7 +22,6 @@ function getDatabaseUri() {
 const BCRYPT_WORK_FACTOR = process.env.NODE_ENV === "test" ? 1 : 12;
 
 console.log("Capstone2 Config:".green);
-console.log("SECRET_KEY:".yellow, SECRET_KEY);
 console.log("PORT:".yellow, PORT.toString());
 console.log("BCRYPT_WORK_FACTOR".yellow, BCRYPT_WORK_FACTOR);
 console.log("Database:".yellow, getDatabaseUri());
