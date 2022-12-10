@@ -1,10 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import RecipeCard from "./RecipeCard";
-import UserContext from '../Login/UserContext';
 
-function RecipeList() {
+function RecipeList({ recipes }) {
   console.debug("RecipeList");
-  const { recipes } = useContext(UserContext);
 
   return (
     <div className="RecipeList">
