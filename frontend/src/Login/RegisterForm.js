@@ -25,7 +25,7 @@ function RegisterForm(){
   const handleSubmit = async (e) => {
     e.preventDefault();
     await register(formData);
-    navigate('/login');
+    navigate('/');
   }
 
   
