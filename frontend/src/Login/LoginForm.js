@@ -47,6 +47,7 @@ function LoginForm(){
             placeholder="password"
             value={formData.password}
             onChange={handleChange}
+            type="password"
             />
           </div>
           <button id="form-button" type="submit">Login</button>

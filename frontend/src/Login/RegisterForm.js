@@ -49,6 +49,7 @@ function RegisterForm(){
             placeholder="password"
             onChange={handleChange}
             value={formData.password}
+            type="password"
             />
           </div>
           <div>

@@ -1,13 +1,5 @@
 body {
     text-align: center;
-    background-image:url("https://images.pexels.com/photos/139259/pexels-photo-139259.jpeg?auto=compress&cs=tinysrgb&w=1600");
-    background-position: bottom;
-    background-size: cover;
-
-     /* This is what makes the background image rescale based on the container’s size */
-    background-attachment: fixed;
-    background-size: auto;
-    background-repeat: no-repeat;
 }
 
 h2 {

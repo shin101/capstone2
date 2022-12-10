@@ -4,7 +4,6 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink, useNavigate } from "react-router-dom";
-// import NavDropdown from 'react-bootstrap/NavDropdown';
 import UserContext from '../Login/UserContext';
 import React, { useContext, useState } from "react";
 
@@ -57,7 +56,7 @@ function NavBar({ logOut }) {
     return (
       <Navbar bg="light" expand="lg">
         <Container fluid>
-          <Navbar.Brand onClick={() => navigate('/')}>My Favorite Recipe</Navbar.Brand>
+          <NavLink to="/">My Favorite Recipe</NavLink>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav

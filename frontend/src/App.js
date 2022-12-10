@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './routes/NavBar.css';
 import './App.css';
 import { BrowserRouter } from "react-router-dom";
 import NavBar from './routes/NavBar';
@@ -62,7 +63,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="App">
       <BrowserRouter>
         <UserContext.Provider value={{ currUser, register, login, search, recipes, setCurrUser, setRecipes }}>
           <NavBar logOut={logOut} />
