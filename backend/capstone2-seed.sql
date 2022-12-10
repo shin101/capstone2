@@ -12,9 +12,12 @@ VALUES ('Sweet Potato Casserole Gourmet & Holiday Baking',
         #Then add the top cookie of each cream pie and press down.
         #I found I liked a thin layer of cream filling better than a thick layer--but you should have plenty if you want to pile it on!
         #Makes approximately 10 cream pies. (20 cookies)' ), ('Banana Milo Milkshake','https://spoonacular.com/recipeImages/716351-556x370.jpg',1,
-        'In a blender, pour in your milk, milo, banana and ice-cream and blend till smooth.
+'In a blender, pour in your milk, milo, banana and ice-cream and blend till smooth.
         #Pour into a glass, spray the whipped cream on top and sprinkle the chopped strawberries on top.
-        #Serve cool.'), ('Wholemeal Cake','https://spoonacular.com/recipeImages/665303-556x370.jpg',4,'In a large bowl, mix ground hazelnut, brown sugar, plain flour and wholemeal flour together and set aside. #Whisk egg whites and sugar at medium high speed till firm and smooth
+        #Serve cool.'), ('Wholemeal Cake',
+                         'https://spoonacular.com/recipeImages/665303-556x370.jpg',
+                         4,
+                         'In a large bowl, mix ground hazelnut, brown sugar, plain flour and wholemeal flour together and set aside. #Whisk egg whites and sugar at medium high speed till firm and smooth
         #Use hand to fold one quarter of beaten egg whites to the flour mixture evenly and remaining egg white in two batches.
         #Lastly add in melted butter in two batches and mix well with a rubber spatula follow by the dried apricots and dried cranberries.
         #Pour mixture into a 7 inch (lined) round cake pan and sprinkle more dried apricots and dried cranberries over it.
@@ -39,7 +42,13 @@ VALUES ('Sweet Potato Casserole Gourmet & Holiday Baking',
         -- #Once the coated cookies are set, remove them fridge and start assembling. Using your buttercream as the glue, place your large white circle, then the blue one (with the star). Enjoy!'
         -- );
 
-
+--   {
+--     title: 'Crabby Corn Chowder',
+--     instructions: '<ol><li>Heat a deep pot over medium heat. Add oil and butter. When butter is melted, add potatoes, celery, onion, bay leaves and chipotle peppers to the pot. Season vegetables with salt and pepper, mix well and saute until tender, about 10 minutes.</li><li>Sprinkle in flour and cook about 2 minutes, stirring constantly. Stir in clam juice and half and half and mix well.</li><li>Bring soup up to a simmer and continue to simmer for about 20 minutes, or until potatoes are soft.</li><li>Stir in corn, crab and sherry and simmer for another 5 minutes, until heated through.</li><li>Adjust the soup seasonings and remove the bay leaf.  Ladle soup into bowls and top with a few dashes of hot sauce, if desired.</li><li>Serve with some crackers, crusty bread or cornbread.</li></ol>',
+--     image: 'https://spoonacular.com/recipeImages/640336-556x370.jpg',
+--     servings: 6,
+--     cuisines: []
+--   },
 
 INSERT INTO users (username, password, first_name, last_name, email)
 VALUES ('doritos',
@@ -50,7 +59,7 @@ VALUES ('doritos',
 
 
 INSERT INTO cuisines (name)
-VALUES ('American'), ('Indian'), ('Mexican');
+VALUES ('American'), ('Indian'), ('');
 
 
 

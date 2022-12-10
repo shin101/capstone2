@@ -14,7 +14,7 @@ function Homepage() {
       <h4>Saved Recipes</h4>
       {currUser.likedRecipes.length ? recipes.filter(r => currUser.likedRecipes.includes(r.id)).map(r=>(
         <RecipeCard key={r.id} {...r} /> 
-      )) : <p>You have no liked recipe. </p>}
+      )) : <p>You have no saved recipes</p>}
     </div>) : (
     <div>
       <h2 className="LoggedOutHomepage">Get your next dinner idea.</h2>
