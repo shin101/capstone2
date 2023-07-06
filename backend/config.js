@@ -13,8 +13,9 @@ const PORT = +process.env.PORT || 3001;
 function getDatabaseUri() {
   return (process.env.NODE_ENV === "test")
       ? "capstone2_test"
-      : process.env.HEROKU_POSTGRESQL_NAVY_URL || "capstone2";
+      : process.env.DATABASE_URL || "capstone2";
 }
+
 
 // Speed up bcrypt during tests, since the algorithm safety isn't being tested
 //

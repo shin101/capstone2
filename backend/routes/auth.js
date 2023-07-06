@@ -45,7 +45,6 @@ const { BadRequestError } = require("../expressError");
  */
 
 router.post("/register", async function (req, res, next) {
-  console.log('here');
   try {
     const validator = jsonschema.validate(req.body, userRegisterSchema);
     if (!validator.valid) {
